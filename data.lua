@@ -3,8 +3,8 @@ NECOARC.is_debug = false
 local charname = "NecoArc-skin"
 
 -- Setup new animations, etc
-local ICONPATH = "__NecoArcPlayer__/graphics/icons/"
-local SR_IMGPATH = "__NecoArcPlayer__/graphics/SR/"
+local ICONPATH = "__NecoArcCharacter__/graphics/icons/"
+local SR_IMGPATH = "__NecoArcCharacter__/graphics/SR/"
 
 
 local characternecoarc_animations = {
@@ -434,4 +434,5 @@ NECOARC.corpse.pictures = {
 }
 
 -- Create prototypes
+
 CharModHelper.create_prototypes(NECOARC)
