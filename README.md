@@ -11,6 +11,7 @@ Much of mod structure is based on the 'New Gear Girl Character 2.0' mod,
 
 
 ## TODO
+- Improve shadows
 - Flying animation for mech armor
 - Other armors
 
