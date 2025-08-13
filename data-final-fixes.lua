@@ -1,0 +1,1 @@
+CharModHelper.check_my_prototypes(NECOARC)
