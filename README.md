@@ -19,6 +19,7 @@ Much of mod structure is based on the 'New Gear Girl Character 2.0' mod,
 ## License
 * [MIT License](https://opensource.org/license/MIT)
 
+
 ## Acknowledgments
 
 * [New Gear Girl Character 2.0](https://mods.factorio.com/mod/NewGirlCharacter-port)

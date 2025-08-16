@@ -6,6 +6,12 @@ local charname = "NecoArc-skin"
 local ICONPATH = "__NecoArcCharacter__/graphics/icons/"
 local SR_IMGPATH = "__NecoArcCharacter__/graphics/SR/"
 
+-- common sprite sizes
+local normal_size = 128
+local normal_scale = normal_scale
+local larger_size = 192
+local shadow_off = -8.0
+
 
 local characternecoarc_animations = {
     water_reflection = {
@@ -24,189 +30,200 @@ local characternecoarc_animations = {
     level1 = {
         dead = {
             filename = SR_IMGPATH .. "level1_dead.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(-7.0, -5.5),
             frame_count = 2,
-            scale = 0.5,
+            scale = normal_scale,
         },
         dead_mask = {
             filename = SR_IMGPATH .. "level1_dead_mask.png",
-            width =  128, 
-            height =  128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(-7.0, -5.5),
             frame_count = 2,
             apply_runtime_tint = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         dead_shadow = {
             filename = SR_IMGPATH .. "level1_dead_shadow.png",
-            width =  128, 
-            height =  128, 
-            shift = util.by_pixel(-7.5, -2.5),
+            width = normal_size,
+            height = normal_size,
+            shift = util.by_pixel(-7.0, -5.5 - 1.0),
             frame_count = 2,
             draw_as_shadow = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         idle = {
             filename = SR_IMGPATH .. "level1_idle.png",
-            width = 128,
-            height = 128,
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
-            scale = 0.5,
+            scale = normal_scale,
         },
         idle_mask = {
             filename = SR_IMGPATH .. "level1_idle_mask.png",
-            width = 128,
-            height = 128,
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
             apply_runtime_tint = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         idle_shadow = {
             filename = SR_IMGPATH .. "level1_idle_shadow.png",
-            width = 128,
-            height = 128,
-            shift = util.by_pixel(0.0, -18.0),
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(0.0, -18.0 + shadow_off),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
             draw_as_shadow = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         idle_gun = {
             filename = SR_IMGPATH .. "level1_idle_gun.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
-            scale = 0.5
+            scale = normal_scale
         },
         idle_gun_mask = {
             filename = SR_IMGPATH .. "level1_idle_gun_mask.png",
-            width = 128, 
-            height = 128,
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
             apply_runtime_tint = true,
-            scale = 0.5
+            scale = normal_scale
         },
         idle_gun_shadow = {
             filename = SR_IMGPATH .. "level1_idle_gun_shadow.png",
-            width = 128, 
-            height = 128, 
-            shift = util.by_pixel(0.0, -18.0),
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(0.0, -18.0 + shadow_off),
             frame_count = 18,
             direction_count = 8,
             animation_speed = 0.15,
             draw_as_shadow = true,
-            scale = 0.5
+            scale = normal_scale
         },
         mining_tool = {
             filename = SR_IMGPATH .. "level1_mining_tool.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.9,
-            scale = 0.5 
+            scale = normal_scale
         },
         mining_tool_mask = {
             filename = SR_IMGPATH .. "level1_mining_tool_mask.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.9,
             apply_runtime_tint = true,
-            scale = 0.5 
+            scale = normal_scale
         },
         mining_tool_shadow = {
             filename = SR_IMGPATH .. "level1_mining_tool_shadow.png",
-            width = 128, 
-            height = 128, 
-            shift = util.by_pixel(0.0, -18.0),
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(0.0, -18.0 + shadow_off),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.9,
             draw_as_shadow = true,
-            scale = 0.5 
+            scale = normal_scale
         },
         running = {
             filename = SR_IMGPATH .. "level1_running.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.6,
-            scale = 0.5,
+            scale = normal_scale,
         },
         running_mask = {
             filename = SR_IMGPATH .. "level1_running_mask.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(0.0, -18.0),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.6,
             apply_runtime_tint = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         running_shadow = {
             filename = SR_IMGPATH .. "level1_running_shadow.png",
-            width = 128, 
-            height = 128, 
-            shift = util.by_pixel(0.0, -18.0),
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(0.0, -18.0 + shadow_off),
             frame_count = 24,
             direction_count = 8,
             animation_speed = 0.6,
             draw_as_shadow = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         running_gun = {
             filename = SR_IMGPATH .. "level1_running_gun.png",
-            width = 128,
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(2.5, -18.0),
             frame_count = 24,
             direction_count = 18,
             animation_speed = 0.6,
-            scale = 0.5,
+            scale = normal_scale,
         },
         running_gun_mask = {
             filename = SR_IMGPATH .. "level1_running_gun_mask.png",
-            width = 128, 
-            height = 128, 
+            width = normal_size,
+            height = normal_size,
             shift = util.by_pixel(2.5, -18.0),
             frame_count = 24,
             direction_count = 18,
             animation_speed = 0.6,
             apply_runtime_tint = true,
-            scale = 0.5,
+            scale = normal_scale,
         },
         running_gun_shadow = {
             filename = SR_IMGPATH .. "level1_running_gun_shadow.png",
-            width = 128, 
-            height = 128, 
-            shift = util.by_pixel(2.5, -18.0),
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(2.5, -18.0 + shadow_off),
             frame_count = 24,
             direction_count = 18,
             animation_speed = 0.6,
             draw_as_shadow = true,
-            scale = 0.5,
+            scale = normal_scale,
+        },
+        running_gun_shadow_flipped = {
+            filename = SR_IMGPATH .. "level1_running_gun_shadow_flipped.png",
+            width = larger_size,
+            height = larger_size,
+            shift = util.by_pixel(2.5, -18.0 + shadow_off),
+            frame_count = 24,
+            direction_count = 18,
+            animation_speed = 0.6,
+            draw_as_shadow = true,
+            scale = normal_scale,
         }
     },
 }
@@ -219,8 +236,8 @@ NECOARC.character = { name = charname }
 NECOARC.corpse = { name = charname .. "-corpse" }
 
 -- Character
-NECOARC.character.localised_name = {"entity-name." .. charname}
-NECOARC.character.localised_description = {"entity-description." .. charname}
+NECOARC.character.localised_name = { "entity-name." .. charname }
+NECOARC.character.localised_description = { "entity-description." .. charname }
 NECOARC.character.icons = {
     {
         icon = ICONPATH .. "character.png",
@@ -271,7 +288,7 @@ NECOARC.character.animations = {
         },
         flipped_shadow_running_with_gun = {
             layers = {
-                characternecoarc_animations.level1.running_gun_shadow
+                characternecoarc_animations.level1.running_gun_shadow_flipped
             }
         },
         running = {
@@ -372,8 +389,8 @@ NECOARC.character.animations = {
 NECOARC.character.water_reflection = characternecoarc_animations.water_reflection
 
 -- Character corpse
-NECOARC.corpse.name = charname.."-corpse"
-NECOARC.corpse.localised_name = {"entity-name." .. NECOARC.corpse.name}
+NECOARC.corpse.name = charname .. "-corpse"
+NECOARC.corpse.localised_name = { "entity-name." .. NECOARC.corpse.name }
 NECOARC.corpse.icons = {
     {
         icon = ICONPATH .. "character.png",
@@ -434,5 +451,4 @@ NECOARC.corpse.pictures = {
 }
 
 -- Create prototypes
-
 CharModHelper.create_prototypes(NECOARC)
